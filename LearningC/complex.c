@@ -6,7 +6,7 @@ struct complex
     float y;
 }; 
 
-float main() 
+int main() 
 {
     struct complex a, b, c, z; 
     
@@ -49,7 +49,8 @@ struct complex juliamap(struct complex c, struct complex z)
     	return b;
     }
 
-const char* complex_print(struct complex z)
+char * complex_print(struct complex z)
 	{
-    	return ("z = %d + %d i \n", z.x, z.y);
+    	printf ("z = %f + %f i \n", z.x, z.y);
+    	return 0;
 	}
