@@ -1,0 +1,13 @@
+
+Short Integer (2 bytes, 16 bits):
+   30528 : 0111011101000000
+Integer (4 bytes, 32 bits):
+   1800000 : 00000000000110110111011101000000
+Unsigned Integer (4 bytes, 32 bits):
+   1800000 : 00000000000110110111011101000000
+
+When putting a positive integer larger than the amount of bits used to store
+it, the values requiring greater bits are lost. For instance 1800000 in binary
+is 110110111011101000000 but short ints only store 16 bits(only the first 16
+digits) so 1800000 is stored as 0111011101000000 and the remaining values are
+lost. Therefore short int is stored as 30528 rather than 1800000.
