@@ -1,9 +1,4 @@
 #include <stdio.h>
-struct complex mult2(struct complex a, struct complex b);
-struct complex square(struct complex a);
-struct complex add2(struct complex a, struct complex b);
-void complex_print(struct complex z);
-int test();
 
 struct complex
 {
@@ -13,7 +8,7 @@ struct complex
 
 int main() 
 {
-    test(); 
+    struct complex a, b, c, z; 
     
     /*a = a.x + a.y;
     b = b.x + b.y;
@@ -54,28 +49,8 @@ struct complex juliamap(struct complex c, struct complex z)
     	return b;
     }
 
-void complex_print(struct complex z)
+char * complex_print(struct complex z)
 	{
     	printf ("z = %f + %f i \n", z.x, z.y);
-	}
-
-
-int test()
-    {
-        struct complex a, b, c, z; 
-        a.x = 0.0;
-        a.y = 0.0;
-        b.x = 1.0;
-        b.y = 1.0;
-        
-        printf ("The square of a complex structure: ");
-        complex_print(square(a));
-        
-        printf ("Product of two complex numbers: ");
-        mult2(a,b);
-        
-        printf ("Complex number representing a^2 + b: ", juliamap(a, b));
-        juliamap(a,b);
-        
     	return 0;
-    }
+	}
