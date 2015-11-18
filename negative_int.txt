@@ -5,12 +5,11 @@ Integer (4 bytes, 32 bits):
 Long Integer (8 bytes, 64 bits):
    -1800000 : 1111111111111111111111111111111111111111111001001000100011000000
 
-Inserting a negative integer larger than the amount of bits used to store
-it, the values requiring greater bits are lost. For instance -1800000 in binary
-is 11111001001000100011000000 but short ints only store 16 bits(only the first 16 
-digits) so -1800000 is stored as 1000100011000000 and the remaining values are
-lost. Therefore short int is stored as -30528 rather than -180000
-
 Because the input constant is negative; instead of leading zeros to represent
-the number, there are leading 1's.
+the number, there are leading 1's. To find the actual number the binary code
+represents, you must subtract one and then take the opposite values for 0 and
+1. This will give you the negative value represented on the left of the
+output. Inserting a negative integer larger than the amount of bits used to
+store it, the values requiring greater bits are lost. Again, just as the case was
+with positive integers.
 
