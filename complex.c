@@ -9,8 +9,8 @@ char * test(struct complex a, struct complex b);
 
 struct complex
 {
-	float x;
-    float y;
+	long double x;
+    	long double y;
 }; 
 
 int main() 
